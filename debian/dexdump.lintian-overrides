@@ -1,0 +1,3 @@
+# Executables of Android SDK uses private libraries located in /usr/lib/android
+
+binary-or-shlib-defines-rpath

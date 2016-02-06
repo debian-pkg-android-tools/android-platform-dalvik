@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+
+usr/share/java/android-dx.jar   usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/lib/dx.jar

@@ -1,0 +1,5 @@
+#!/usr/bin/dh-exec
+
+dx/etc/dx                   usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}
+dx/etc/mainDexClasses       usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}
+dx/etc/mainDexClasses.rules usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}

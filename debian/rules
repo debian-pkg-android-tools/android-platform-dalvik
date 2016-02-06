@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/pkg-info.mk
+
+UPSTREAM_TAG = android-$(subst +,_,$(DEB_VERSION_UPSTREAM))
+# See sdk/build_tools_source.prop_template in platform/development
+export BUILD_TOOLS_VERSION = 23.0.2
+GRADLE_OPTIONS = --settings-file debian/settings.gradle
+
+%:
+	dh $@ --with maven_repo_helper --buildsystem=gradle
+
+override_dh_auto_build:
+	dh_auto_build -- $(GRADLE_OPTIONS) assemble poms
+	make -f debian/libdex.mk
+	make -f debian/dexdump.mk
+	make -f debian/dmtracedump.mk
+	make -f debian/hprof-conv.mk
+
+override_dh_auto_clean:
+	dh_auto_clean
+	$(RM) -r debian/.gradle
+	make clean -f debian/libdex.mk
+	make clean -f debian/dexdump.mk
+	make clean -f debian/dmtracedump.mk
+	make clean -f debian/hprof-conv.mk
+
+override_dh_install:
+	dh_install
+	chmod +x debian/dalvik-exchange/usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/dx
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l/usr/lib/android
+
+get-orig-source: $(UPSTREAM_TAG).tar.gz
+	mk-origtargz --repack --compression xz $<
+
+$(UPSTREAM_TAG).tar.gz:
+	wget https://android.googlesource.com/platform/dalvik/+archive/$(UPSTREAM_TAG).tar.gz

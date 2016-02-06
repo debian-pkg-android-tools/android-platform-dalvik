@@ -1,0 +1,1 @@
+debian/build/dx.pom --artifact=debian/build/libs/dx-*.jar --java-lib

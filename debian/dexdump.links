@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+
+usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/dexdump   usr/bin/dexdump

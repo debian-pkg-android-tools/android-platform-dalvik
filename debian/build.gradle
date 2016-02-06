@@ -1,0 +1,41 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+version = '1.11' // See com/android/dx/Version.java
+group = 'com.android'
+
+dependencies {
+  compile 'com.android:dex:debian'
+}
+
+sourceSets {
+  main {
+    java { srcDir '../dx/src' }
+  }
+}
+
+jar {
+  manifest {
+    from '../dx/etc/manifest.txt'
+    attributes 'Class-Path': 'android-dex.jar'
+  }
+}
+
+javadoc {
+  options {
+    links 'file:///usr/share/doc/default-jdk-doc/api'
+  }
+}
+
+task poms {
+  pom {
+    project {
+      artifactId project.name
+      version project.version
+    }
+  }.writeTo("${buildDir}/${project.name}.pom")
+}
+
+clean.doLast {
+  delete("${buildDir}/*.pom")
+}
