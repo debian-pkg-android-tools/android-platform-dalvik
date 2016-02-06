@@ -1,0 +1,14 @@
+.debhelper/
+.gradle/
+.mh/
+*.1
+*.log
+*.substvars
+android-*/
+build
+dalvik-exchange/
+debhelper-build-stamp
+dexdump/
+dmtracedump/
+files
+hprof-conv/

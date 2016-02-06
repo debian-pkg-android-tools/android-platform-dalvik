@@ -14,8 +14,11 @@ override_dh_auto_build:
 	dh_auto_build -- $(GRADLE_OPTIONS) assemble poms
 	make -f debian/libdex.mk
 	make -f debian/dexdump.mk
+	pandoc -s -o debian/dexdump.1 debian/dexdump.1.md
 	make -f debian/dmtracedump.mk
+	pandoc -s -o debian/dmtracedump.1 debian/dmtracedump.1.md
 	make -f debian/hprof-conv.mk
+	pandoc -s -o debian/hprof-conv.1 debian/hprof-conv.1.md
 
 override_dh_auto_clean:
 	dh_auto_clean
@@ -24,6 +27,7 @@ override_dh_auto_clean:
 	make clean -f debian/dexdump.mk
 	make clean -f debian/dmtracedump.mk
 	make clean -f debian/hprof-conv.mk
+	$(RM) debian/*.1
 
 override_dh_install:
 	dh_install
