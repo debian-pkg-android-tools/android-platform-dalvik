@@ -6,7 +6,7 @@ Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
 Build-Depends: android-libcutils-dev (>= 1:6.0.0+r26~),
                android-liblog-dev (>= 1:6.0.0+r26~),
                android-libnativehelper-dev (>= 6.0.0+r26~),
-               android-libcutils-dev (>= 1:6.0.0+r26~),
+               android-libutils-dev (>= 1:6.0.0+r26~),
                android-libziparchive-dev (>= 1:6.0.0+r26~),
                debhelper (>= 9),
                default-jdk,
