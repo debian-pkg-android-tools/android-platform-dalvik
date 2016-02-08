@@ -1,4 +1,4 @@
-android-platform-dalvik (6.0.1+r16-1) UNRELEASED; urgency=medium
+android-platform-dalvik (6.0.1+r16-1) unstable; urgency=low
 
   * Initial release (Closes: #793614)
 
