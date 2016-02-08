@@ -5,18 +5,18 @@ Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.or
 Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
 Build-Depends: android-libcutils-dev (>= 1:6.0.0+r26~),
                android-liblog-dev (>= 1:6.0.0+r26~),
-               android-libnativehelper-dev,
-               android-libziparchive-dev (>= 1:6),
+               android-libnativehelper-dev (>= 6.0.0+r26~),
+               android-libziparchive-dev (>= 1:6.0.0+r26~),
                debhelper (>= 9),
                default-jdk,
                dh-exec,
                pandoc
-Build-Depends-Indep: android-platform-build-headers,
+Build-Depends-Indep: android-platform-build-headers (>= 1:6.0.0+r26~),
                      default-jdk-doc,
                      gradle,
                      gradle-debian-helper,
                      javahelper,
-                     libdex-java,
+                     libdex-java (>= 6.0.0+r26~),
                      maven-repo-helper
 Standards-Version: 3.9.7
 Homepage: https://android.googlesource.com/platform/dalvik
@@ -37,7 +37,7 @@ Package: android-libdex-dev
 Section: libdevel
 Architecture: amd64 i386
 Depends: android-libdex (= ${binary:Version}),
-         android-libnativehelper-dev,
+         android-libnativehelper-dev (>= 6.0.0+r26~),
          ${misc:Depends}
 Description: Dalvik Executable library - Development files
  Dalvik is a process virtual machine in Google's Android operating system that
@@ -72,7 +72,7 @@ Description: HPROF Converter
 Package: dalvik-exchange
 Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
-         libdex-java,
+         libdex-java (>= 6.0.0+r26~),
          ${misc:Depends}
 Description: Dalvik eXchange compiler
  Dalvik is a process virtual machine in Google's Android operating system that
