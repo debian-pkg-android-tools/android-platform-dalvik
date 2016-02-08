@@ -1,0 +1,10 @@
+#! /bin/sh
+
+set -e
+
+#DEBHELPER#
+
+update-alternatives --install /usr/bin/dx dx /usr/bin/dalvik-exchange 100
+
+exit 0
+
