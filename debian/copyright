@@ -4,6 +4,10 @@ Files-Excluded: *.jar
 
 Files: *
 Copyright: 2005-2015, The Android Open Source Project
+           2006, Google Inc.
+           2005-2006, Intel Corporation
+           2005-2006, RSA Data Security Inc.
+           2005-2006, Caldera International Inc.
 License: Apache-2.0
 
 Files: debian/*
