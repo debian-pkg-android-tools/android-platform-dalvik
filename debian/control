@@ -74,7 +74,7 @@ Description: HPROF Converter
 Package: dalvik-exchange
 Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
-         libdex-java (>= 6.0.0+r26~),
+         ${java:Depends}
          ${misc:Depends}
 Description: Dalvik eXchange compiler
  Dalvik is a process virtual machine in Google's Android operating system that

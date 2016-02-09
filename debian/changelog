@@ -5,6 +5,9 @@ android-platform-dalvik (6.0.1+r16-2) UNRELEASED; urgency=medium
     - d/control:
       - Move default-jdk to Build-Depends-Indep
       - Move android-platform-build-headers to Build-Depends
+  * Use ${java:Depends} for Java dependencies:
+    - d/control: Replace libdex-java with ${java:Depends}
+    - d/dalvik-exchange.jlibs: Specify JARs for jh_depends
   * d/control: Remove gradle from Build-Depends-Indep as unnecessary
 
  -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 09 Feb 2016 14:19:58 +0800

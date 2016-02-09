@@ -17,7 +17,7 @@ sourceSets {
 jar {
   manifest {
     from '../dx/etc/manifest.txt'
-    attributes 'Class-Path': 'android-dex.jar'
+    attributes 'Class-Path': '/usr/share/java/dex.jar'
   }
 }
 
