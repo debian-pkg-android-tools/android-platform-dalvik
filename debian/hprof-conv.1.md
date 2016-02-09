@@ -1,6 +1,6 @@
-% HPROF-CONV(1) hprof-conv Manuals
+% HPROF-CONV(1) android-platform-dalvik | hprof-conv Manuals
 % The Android Open Source Project
-% 13 October 2015
+% 6.0.1_r16
 
 # NAME
 

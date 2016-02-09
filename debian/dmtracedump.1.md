@@ -1,6 +1,6 @@
-% DMTRACEDUMP(1) dmtracedump Manuals
+% DMTRACEDUMP(1) android-platform-dalvik | dmtracedump Manuals
 % The Android Open Source Project
-% 13 October 2015
+% 6.0.1_r16
 
 # NAME
 

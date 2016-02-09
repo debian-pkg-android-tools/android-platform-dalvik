@@ -1,6 +1,6 @@
-% DEXDUMP(1) dexdump Manuals
+% DEXDUMP(1) android-platform-dalvik | dexdump Manuals
 % The Android Open Source Project
-% 13 October 2015
+% 6.0.1_r16
 
 # NAME
 
