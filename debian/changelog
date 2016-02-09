@@ -1,3 +1,14 @@
+android-platform-dalvik (6.0.1+r16-2) UNRELEASED; urgency=medium
+
+  * Compatible with arch and indep builds (Closes: #814202):
+    - d/rules: Separate indep and arch targets
+    - d/control:
+      - Move default-jdk to Build-Depends-Indep
+      - Move android-platform-build-headers to Build-Depends
+  * d/control: Remove gradle from Build-Depends-Indep as unnecessary
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 09 Feb 2016 14:19:58 +0800
+
 android-platform-dalvik (6.0.1+r16-1) unstable; urgency=low
 
   * Initial release (Closes: #793614)
