@@ -84,5 +84,5 @@ Description: Dalvik eXchange compiler
  reformulates them for consumption in the VM. It also does a few other
  things; use "dalvik-exchange --help" to see a modicum of self-documentation.
  .
- This program is is officially named "dx" but in order to avoid naming conflict
- with OpenDX in Debian we have to rename it to "dalvik-exchange".
+ This program is officially named "dx" but in order to avoid naming conflict
+ with OpenDX in Debian it is renamed to "dalvik-exchange".

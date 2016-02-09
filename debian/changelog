@@ -8,7 +8,9 @@ android-platform-dalvik (6.0.1+r16-2) UNRELEASED; urgency=medium
   * Use ${java:Depends} for Java dependencies:
     - d/control: Replace libdex-java with ${java:Depends}
     - d/dalvik-exchange.jlibs: Specify JARs for jh_depends
-  * d/control: Remove gradle from Build-Depends-Indep as unnecessary
+  * d/control:
+    - Remove gradle from Build-Depends-Indep as unnecessary
+    - Improve dalvik-exchange description
 
  -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 09 Feb 2016 14:19:58 +0800
 
