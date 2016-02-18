@@ -1,0 +1,13 @@
+
+All Android SDK packages need to be synchronized in their versions
+since upstream only ever builds the entire SDK together at once.
+Since that approach would require a source package of many gigs, the
+parts of the SDK are packaged up based on the upstream git
+repositories.  Also, the tarball download link from
+https://android.googlesource.com provides the only source release from
+upstream.
+
+For more info:
+https://wiki.debian.org/AndroidTools#Updating_the_source_packages
+
+ -- Hans-Christoph Steiner <hans@eds.org>, Thu, 18 Feb 2016 09:39:38 +0100
