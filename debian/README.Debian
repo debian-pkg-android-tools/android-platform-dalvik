@@ -1,0 +1,12 @@
+
+This package includes a bunch of symlinks and other little tricks to
+create the same path layout as is used by the official Android SDK
+binaries released by Google.
+
+Also, this utility is only ever known as 'dx' in the Android world as
+well as the official documentation.  The other tools that rely on it
+only ever call it as 'dx'.  There is already a package called 'dx' in
+Debian that is totally unrelated.  For now, this package Conflicts:
+with 'dx' so that it can provide /usr/bin/dx, as users will expect.
+
+ -- Hans-Christoph Steiner <hans@eds.org>, Thu, 18 Feb 2016 09:30:12 +0100
