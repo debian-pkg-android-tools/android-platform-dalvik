@@ -18,7 +18,7 @@ Build-Depends-Indep: default-jdk,
                      default-jdk-doc,
                      gradle-debian-helper,
                      javahelper,
-                     libdex-java (>= 6.0.1+r16~),
+                     libdex-java (>= 6.0.1+r10~),
                      maven-repo-helper
 Standards-Version: 3.9.7
 Homepage: https://android.googlesource.com/platform/dalvik
