@@ -1,4 +1,4 @@
-android-platform-dalvik (6.0.1+r16-2) UNRELEASED; urgency=medium
+android-platform-dalvik (6.0.1+r16-2) unstable; urgency=medium
 
   * Compatible with arch and indep builds (Closes: #814202):
     - d/rules: Separate indep and arch targets
