@@ -10,16 +10,16 @@ Build-Depends: android-libcutils-dev (>= 1:6.0.1+r16~),
                android-libziparchive-dev (>= 1:6.0.1+r16~),
                android-platform-build-headers (>= 1:6.0.1+r16~),
                debhelper (>= 9),
+               default-jdk,
+               default-jdk-doc,
                dh-exec,
+               gradle-debian-helper,
+               javahelper,
+               libdex-java (>= 6.0.1+r10~),
                libsafe-iop-dev,
+               maven-repo-helper,
                pandoc,
                zlib1g-dev
-Build-Depends-Indep: default-jdk,
-                     default-jdk-doc,
-                     gradle-debian-helper,
-                     javahelper,
-                     libdex-java (>= 6.0.1+r10~),
-                     maven-repo-helper
 Standards-Version: 3.9.7
 Homepage: https://android.googlesource.com/platform/dalvik
 Vcs-Git: https://anonscm.debian.org/git/android-tools/android-platform-dalvik.git
