@@ -2,7 +2,8 @@ Source: android-platform-dalvik
 Section: devel
 Priority: optional
 Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.org>
-Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
+Uploaders: Kai-Chung Yan <seamlikok@gmail.com>,
+           Hans-Christoph Steiner <hans@eds.org>
 Build-Depends: android-libcutils-dev (>= 1:6.0.1+r16~),
                android-liblog-dev (>= 1:6.0.1+r16~),
                android-libnativehelper-dev (>= 6.0.1+r16~),
