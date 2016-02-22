@@ -77,7 +77,6 @@ Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
          ${java:Depends},
          ${misc:Depends}
-Conflicts: dx
 Description: Dalvik eXchange compiler
  Dalvik is a process virtual machine in Google's Android operating system that
  executes applications written for Android.
