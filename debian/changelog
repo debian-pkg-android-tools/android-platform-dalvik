@@ -1,3 +1,9 @@
+android-platform-dalvik (6.0.1+r16-4) unstable; urgency=medium
+
+  * remove Conflicts: dx (Closes: #814149, #815105)
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Tue, 23 Feb 2016 20:04:20 +0100
+
 android-platform-dalvik (6.0.1+r16-3) unstable; urgency=medium
 
   * remove /usr/bin/dx symlink (Closes: #814149, #815105)
