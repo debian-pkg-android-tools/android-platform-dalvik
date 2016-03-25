@@ -1,1 +1,3 @@
-libdex.so*   usr/lib/android
+#!/usr/bin/dh-exec
+
+libdex.so*   usr/lib/${DEB_HOST_MULTIARCH}/android
