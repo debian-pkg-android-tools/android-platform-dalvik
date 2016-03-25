@@ -56,6 +56,8 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Tool to display information about Android .dex files
  The "dexdump" tool is intended to mimic "objdump". When possible, use similar
  command-line arguments.
+ .
+ Note: dexdump on amd64 will not work until the upstream fixes it.
 
 Package: dmtracedump
 Architecture: amd64 i386
