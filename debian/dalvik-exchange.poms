@@ -1,1 +1,1 @@
-debian/build/dx.pom --artifact=debian/build/libs/dx-*.jar --java-lib
+debian/build/dx.pom --artifact=debian/build/libs/dx-*.jar --java-lib --usj-name=com.android.dx

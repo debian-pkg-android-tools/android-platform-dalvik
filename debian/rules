@@ -10,7 +10,7 @@ GRADLE_OPTIONS = --settings-file debian/settings.gradle
 export DEB_HOST_MULTIARCH
 
 %:
-	dh $@
+	dh $@ --with=javahelper
 
 override_dh_auto_build-indep:
 	dh_auto_build --buildsystem=gradle -- $(GRADLE_OPTIONS) assemble poms
@@ -41,7 +41,6 @@ override_dh_install-indep:
 	dh_install --indep
 	chmod +x debian/dalvik-exchange/usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/dx
 	mh_install
-	jh_depends
 
 override_dh_shlibdeps:
 	dh_shlibdeps -l/usr/lib/android
