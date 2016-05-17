@@ -17,11 +17,9 @@ SOURCES = CmdUtils.cpp \
           sha1.cpp \
           SysUtil.cpp
 SOURCES := $(foreach source, $(SOURCES), libdex/$(source))
-OBJECTS = $(SOURCES:.cpp=.o)
-CXXFLAGS += -fPIC
 CPPFLAGS += -include android/arch/AndroidConfig.h \
             -I/usr/include/android -I/usr/include/android/nativehelper -I.
-LDFLAGS += -shared -Wl,-rpath=/usr/lib/$(DEB_HOST_MULTIARCH)/android:/usr/lib/android -Wl,-soname,$(NAME).so.0 \
+LDFLAGS += -fPIC -shared -Wl,-rpath=/usr/lib/$(DEB_HOST_MULTIARCH)/android:/usr/lib/android -Wl,-soname,$(NAME).so.0 \
            -lz -L/usr/lib/android -L/usr/lib/$(DEB_HOST_MULTIARCH)/android -llog -lziparchive
 
 build: $(SOURCES)

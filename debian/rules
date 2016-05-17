@@ -3,11 +3,12 @@
 include /usr/share/dpkg/architecture.mk
 include /usr/share/dpkg/pkg-info.mk
 
-UPSTREAM_TAG = android-$(subst +,_,$(DEB_VERSION_UPSTREAM))
 # See sdk/build_tools_source.prop_template in platform/development
 export BUILD_TOOLS_VERSION = 23.0.2
-GRADLE_OPTIONS = --settings-file debian/settings.gradle
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_HOST_MULTIARCH
+GRADLE_OPTIONS = --settings-file debian/settings.gradle
+UPSTREAM_TAG = android-$(subst +,_,$(DEB_VERSION_UPSTREAM))
 
 %:
 	dh $@ --with=javahelper
