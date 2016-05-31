@@ -21,7 +21,7 @@ Build-Depends: android-libcutils-dev (>= 1:6.0.1+r16~) [amd64 i386],
 Build-Depends-Indep: default-jdk,
                      default-jdk-doc,
                      libandroid-dex-java,
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: https://android.googlesource.com/platform/dalvik
 Vcs-Git: https://anonscm.debian.org/git/android-tools/android-platform-dalvik.git
 Vcs-Browser: https://anonscm.debian.org/cgit/android-tools/android-platform-dalvik.git

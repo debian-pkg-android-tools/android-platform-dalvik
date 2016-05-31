@@ -5,6 +5,7 @@ android-platform-dalvik (6.0.1+r16-5) UNRELEASED; urgency=medium
     - Move some BDs to Build-Depends-Indep
     - Change dependency: libdex-java => libandroid-dex-java
     - Mention that dexdump on amd64 will not work
+    - Standards-Version => 3.9.8 (no changes)
   * Add multi-arch support
   * dalvik-exchange: Install com.android.dx.jar instead of dx.jar into
     /usr/share/java
