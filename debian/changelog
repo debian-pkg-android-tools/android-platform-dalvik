@@ -9,7 +9,6 @@ android-platform-dalvik (6.0.1+r16-5) UNRELEASED; urgency=medium
   * Add multi-arch support
   * dalvik-exchange: Install com.android.dx.jar instead of dx.jar into
     /usr/share/java
-  d/rules: export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
  -- Kai-Chung Yan <seamlikok@gmail.com>  Thu, 24 Mar 2016 20:36:08 +0800
 
