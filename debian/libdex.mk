@@ -19,8 +19,8 @@ SOURCES = CmdUtils.cpp \
 SOURCES := $(foreach source, $(SOURCES), libdex/$(source))
 CPPFLAGS += -include android/arch/AndroidConfig.h \
             -I/usr/include/android -I/usr/include/android/nativehelper -I.
-LDFLAGS += -fPIC -shared -Wl,-rpath=/usr/lib/$(DEB_HOST_MULTIARCH)/android:/usr/lib/android -Wl,-soname,$(NAME).so.0 \
-           -lz -L/usr/lib/android -L/usr/lib/$(DEB_HOST_MULTIARCH)/android -llog -lziparchive
+LDFLAGS += -fPIC -shared -Wl,-rpath=/usr/lib/$(DEB_HOST_MULTIARCH)/android -Wl,-soname,$(NAME).so.0 \
+           -lz -L/usr/lib/$(DEB_HOST_MULTIARCH)/android -llog -lziparchive
 
 build: $(SOURCES)
 	$(CXX) $^ -o $(NAME).so.0 $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)

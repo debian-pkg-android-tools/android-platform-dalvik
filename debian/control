@@ -4,11 +4,11 @@ Priority: optional
 Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.org>
 Uploaders: Kai-Chung Yan <seamlikok@gmail.com>,
            Hans-Christoph Steiner <hans@eds.org>
-Build-Depends: android-libcutils-dev (>= 1:6.0.1+r16~) [amd64 i386],
-               android-liblog-dev (>= 1:6.0.1+r16~) [amd64 i386],
+Build-Depends: android-libcutils-dev (>= 1:6.0.1+r43-1) [amd64 i386],
+               android-liblog-dev (>= 1:6.0.1+r43-1) [amd64 i386],
                android-libnativehelper-dev (>= 6.0.1+r16~) [amd64 i386],
-               android-libutils-dev (>= 1:6.0.1+r16~) [amd64 i386],
-               android-libziparchive-dev (>= 1:6.0.1+r16~) [amd64 i386],
+               android-libutils-dev (>= 1:6.0.1+r43-1) [amd64 i386],
+               android-libziparchive-dev (>= 1:6.0.1+r43-1) [amd64 i386],
                android-platform-build-headers (>= 1:6.0.1+r16~) [amd64 i386],
                debhelper (>= 9),
                dh-exec,
