@@ -27,15 +27,9 @@ javadoc {
   }
 }
 
-task poms {
-  pom {
-    project {
-      artifactId project.name
-      version project.version
-    }
-  }.writeTo("${buildDir}/${project.name}.pom")
+task generatePom {
+  assemble.dependsOn generatePom
+  doFirst { pom { project {} }.writeTo("${buildDir}/${project.name}.pom") }
+  clean.doLast { delete("${buildDir}/${project.name}.pom") }
 }
 
-clean.doLast {
-  delete("${buildDir}/*.pom")
-}

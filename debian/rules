@@ -13,7 +13,7 @@ UPSTREAM_TAG = android-$(subst +,_,$(DEB_VERSION_UPSTREAM))
 	dh $@ --with=javahelper
 
 override_dh_auto_build-indep:
-	dh_auto_build --buildsystem=gradle -- $(GRADLE_OPTIONS) assemble poms
+	dh_auto_build --buildsystem=gradle -- $(GRADLE_OPTIONS) assemble
 
 override_dh_auto_clean-indep:
 	dh_auto_clean --indep --buildsystem=gradle
