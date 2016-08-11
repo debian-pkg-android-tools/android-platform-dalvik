@@ -17,7 +17,7 @@ android-platform-dalvik (6.0.1+r55-1) UNRELEASED; urgency=medium
   * debian: Add watch file for usage with uscan
   * debian/watch: recompress using xz
 
- -- Chirayu Desai <chirayudesai1@gmail.com>  Fri, 22 Jul 2016 00:36:03 +0530
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Thu, 11 Aug 2016 20:30:58 +0800
 
 android-platform-dalvik (6.0.1+r16-4) unstable; urgency=medium
 
