@@ -58,7 +58,4 @@ override_dh_shlibdeps:
 	dh_shlibdeps -l/usr/lib/$(DEB_HOST_MULTIARCH)/android
 
 get-orig-source: $(UPSTREAM_TAG).tar.gz
-	mk-origtargz --repack --compression xz $<
-
-$(UPSTREAM_TAG).tar.gz:
-	wget https://android.googlesource.com/platform/dalvik/+archive/$(UPSTREAM_TAG).tar.gz
+	uscan --download-current-version --force-download
