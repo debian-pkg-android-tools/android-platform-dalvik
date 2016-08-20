@@ -6,6 +6,10 @@ include /usr/share/dpkg/pkg-info.mk
 # See sdk/build_tools_source.prop_template in platform/development
 export BUILD_TOOLS_VERSION = 23.0.2
 export DEB_HOST_MULTIARCH
+export DEB_CFLAGS_MAINT_APPEND = -fPIC -DNDEBUG
+export DEB_CPPLAGS_MAINT_APPEND = -include android/arch/AndroidConfig.h
+export DEB_CXXFLAGS_MAINT_APPEND = -fPIC -DNDEBUG
+export DEB_LDFLAGS_MAINT_APPEND = -fPIC
 # See com/android/dx/Version.java
 DX_VERSION = 1.11
 UPSTREAM_TAG = android-$(subst +,_,$(DEB_VERSION_UPSTREAM))
