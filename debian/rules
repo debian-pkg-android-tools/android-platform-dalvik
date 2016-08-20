@@ -15,7 +15,7 @@ DX_VERSION = 1.11
 UPSTREAM_TAG = android-$(subst +,_,$(DEB_VERSION_UPSTREAM))
 
 %:
-	dh $@ --with=javahelper
+	dh $@
 
 override_dh_auto_build-indep:
 	dh_auto_build --buildsystem=gradle -- \

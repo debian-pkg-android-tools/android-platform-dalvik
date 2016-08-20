@@ -21,12 +21,6 @@ jar {
   }
 }
 
-javadoc {
-  options {
-    links 'file:///usr/share/doc/default-jdk-doc/api'
-  }
-}
-
 task generatePom {
   assemble.dependsOn generatePom
   outputs.files "${buildDir}/*.pom"

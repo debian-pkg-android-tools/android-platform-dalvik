@@ -13,7 +13,6 @@ Build-Depends: android-libcutils-dev (>= 1:6.0.1+r43~) [amd64 i386],
                debhelper (>= 9),
                dh-exec,
                gradle-debian-helper,
-               javahelper,
                libsafe-iop-dev [amd64 i386],
                maven-repo-helper,
                pandoc,
@@ -78,7 +77,7 @@ Description: HPROF Converter
 Package: dalvik-exchange
 Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
-         ${java:Depends},
+         libandroid-dex-java,
          ${misc:Depends}
 Description: Manipulate Dalvik eXchange format and produce dex files
  Dalvik is a process virtual machine in Google's Android operating system that
