@@ -20,7 +20,8 @@ Build-Depends: android-libcutils-dev (>= 1:6.0.1+r43~) [amd64 i386],
                zlib1g-dev [amd64 i386]
 Build-Depends-Indep: default-jdk,
                      default-jdk-doc,
-                     libandroid-dex-java
+                     libandroid-dex-java,
+                     libjarjar-java
 Standards-Version: 3.9.8
 Homepage: https://android.googlesource.com/platform/dalvik
 Vcs-Git: https://anonscm.debian.org/git/android-tools/android-platform-dalvik.git
@@ -79,13 +80,33 @@ Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
          ${java:Depends},
          ${misc:Depends}
-Description: Dalvik eXchange compiler
+Description: Manipulate Dalvik eXchange format and produce dex files
  Dalvik is a process virtual machine in Google's Android operating system that
  executes applications written for Android.
  .
- Home of Dalvik eXchange, the thing that takes in class files and
- reformulates them for consumption in the VM. It also does a few other
+ dalvik-exchange is the home of Dalvik eXchange, the thing that takes in class
+ files and reformulates them for consumption in the VM. It also does a few other
  things; use "dalvik-exchange --help" to see a modicum of self-documentation.
  .
  This program is officially named "dx" but in order to avoid naming conflict
  with OpenDX in Debian it is renamed to "dalvik-exchange".
+
+Package: libandroid-jack-dx-java
+Architecture: all
+Section: java
+Depends: libandroid-dex-java,
+         ${misc:Depends}
+Description: dalvik-exchange library for Jack
+ Dalvik is a process virtual machine in Google's Android operating system that
+ executes applications written for Android.
+ .
+ This library is based on the Java library of "dalvik-exchange" with the
+ following changes:
+ .
+   * Renamed package from com.android.dx to com.android.jack.dx
+   * Removed package com.android.dx.dex.cf
+   * Removed package com.android.dx.command
+   * Removed package com.android.multidex
+ .
+ This library is intended for being used by Jack. See also:
+ <https://android.googlesource.com/toolchain/jack/+/ub-jack/dx/README.android>

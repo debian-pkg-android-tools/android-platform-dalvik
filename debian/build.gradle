@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
-version = '1.11' // See com/android/dx/Version.java
+version = dxVersion
 group = 'com.android'
 
 dependencies {
@@ -29,7 +29,13 @@ javadoc {
 
 task generatePom {
   assemble.dependsOn generatePom
-  doFirst { pom { project {} }.writeTo("${buildDir}/${project.name}.pom") }
+  outputs.files "${buildDir}/*.pom"
+  doFirst {
+    pom { project {} }.writeTo("${buildDir}/${project.name}.pom")
+    pom {
+      project { groupId 'com.android.jack'}
+    }.writeTo("${buildDir}/jack-dx.pom")
+  }
   clean.doLast { delete("${buildDir}/${project.name}.pom") }
 }
 

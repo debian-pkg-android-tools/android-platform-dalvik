@@ -6,14 +6,22 @@ include /usr/share/dpkg/pkg-info.mk
 # See sdk/build_tools_source.prop_template in platform/development
 export BUILD_TOOLS_VERSION = 23.0.2
 export DEB_HOST_MULTIARCH
-GRADLE_OPTIONS = --settings-file debian/settings.gradle
+# See com/android/dx/Version.java
+DX_VERSION = 1.11
 UPSTREAM_TAG = android-$(subst +,_,$(DEB_VERSION_UPSTREAM))
 
 %:
 	dh $@ --with=javahelper
 
 override_dh_auto_build-indep:
-	dh_auto_build --buildsystem=gradle -- $(GRADLE_OPTIONS) assemble
+	dh_auto_build --buildsystem=gradle -- \
+	              --settings-file debian/settings.gradle \
+	              --project-prop dxVersion=$(DX_VERSION) assemble
+	java -jar /usr/share/java/jarjar.jar \
+	     process \
+	     debian/jack-dx.jarjar-rules \
+	     debian/build/libs/dx-$(DX_VERSION).jar \
+	     debian/build/libs/jack-dx.jar
 
 override_dh_auto_clean-indep:
 	dh_auto_clean --indep --buildsystem=gradle

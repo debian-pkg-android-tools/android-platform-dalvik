@@ -1,0 +1,4 @@
+rule com.android.dx.** com.android.jack.dx.@1
+zap com.android.dx.command.**
+zap com.android.dx.dex.cf.**
+zap com.android.multidex.**
