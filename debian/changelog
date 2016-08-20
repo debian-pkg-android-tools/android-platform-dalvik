@@ -2,8 +2,8 @@ android-platform-dalvik (6.0.1+r55-1) UNRELEASED; urgency=medium
 
   [ Kai-Chung Yan ]
   * d/control:
-    - BDs of C/C++ libraries are limited to [amd64 i386]
-    - Move some BDs to Build-Depends-Indep
+    - Build-Depends of C/C++ libraries are limited to [amd64 i386]
+    - Move some Build-Depends to Build-Depends-Indep
     - Change dependency: libdex-java => libandroid-dex-java
     - Mention that dexdump on amd64 will not work
     - Standards-Version => 3.9.8 (no changes)
@@ -11,6 +11,10 @@ android-platform-dalvik (6.0.1+r55-1) UNRELEASED; urgency=medium
     - Depends on packages from src:android-platform-system-core >= 1:6.0.1+r43-1
   * dalvik-exchange: Install com.android.dx.jar instead of dx.jar into
     /usr/share/java
+  * New package "libandroid-jack-dx-java" based on "dalvik-exchange"
+    - Add libjarjar-java to Build-Depends
+  * Remove the use of javahelper
+  * Enable NDEBUG macro for all binaries
 
   [ Chirayu Desai ]
   * New upstream release
