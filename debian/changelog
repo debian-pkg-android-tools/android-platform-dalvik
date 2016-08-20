@@ -13,7 +13,7 @@ android-platform-dalvik (6.0.1+r55-1) UNRELEASED; urgency=medium
     /usr/share/java
 
   [ Chirayu Desai ]
-  * New upstream release (identical to 6.0.1+r16)
+  * New upstream release
   * debian: Add watch file for usage with uscan
   * debian/watch: recompress using xz
 
