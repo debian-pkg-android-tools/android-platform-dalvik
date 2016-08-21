@@ -8,7 +8,8 @@ android-platform-dalvik (6.0.1+r55-1) UNRELEASED; urgency=medium
     - Mention that dexdump on amd64 will not work
     - Standards-Version => 3.9.8 (no changes)
   * Add multi-arch support (Closes: #828958)
-    - Depends on packages from src:android-platform-system-core >= 1:6.0.1+r43-1
+    - Depends on packages from src:android-platform-system-core >=
+      1:6.0.1+r55-1~
   * dalvik-exchange: Install com.android.dx.jar instead of dx.jar into
     /usr/share/java
   * New package "libandroid-jack-dx-java" based on "dalvik-exchange"
@@ -21,7 +22,7 @@ android-platform-dalvik (6.0.1+r55-1) UNRELEASED; urgency=medium
   * debian: Add watch file for usage with uscan
   * debian/watch: recompress using xz
 
- -- Kai-Chung Yan <seamlikok@gmail.com>  Thu, 11 Aug 2016 20:30:58 +0800
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Sun, 21 Aug 2016 16:21:14 +0800
 
 android-platform-dalvik (6.0.1+r16-4) unstable; urgency=medium
 
