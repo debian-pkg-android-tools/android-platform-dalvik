@@ -1,5 +1,3 @@
-#!/usr/bin/dh-exec
-
-usr/share/java/com.android.dx.jar                                     usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/lib/dx.jar
-usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/dx             usr/bin/dalvik-exchange
-usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/mainDexClasses usr/bin/mainDexClasses
+usr/share/java/com.android.dx.jar                     usr/lib/android-sdk/build-tools/debian/lib/dx.jar
+usr/lib/android-sdk/build-tools/debian/dx             usr/bin/dalvik-exchange
+usr/lib/android-sdk/build-tools/debian/mainDexClasses usr/bin/mainDexClasses

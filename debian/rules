@@ -3,8 +3,6 @@
 include /usr/share/dpkg/architecture.mk
 include /usr/share/dpkg/pkg-info.mk
 
-# See sdk/build_tools_source.prop_template in platform/development
-export BUILD_TOOLS_VERSION = 23.0.2
 export DEB_HOST_MULTIARCH
 export DEB_CFLAGS_MAINT_APPEND = -fPIC -DNDEBUG
 export DEB_CPPLAGS_MAINT_APPEND = -include android/arch/AndroidConfig.h
@@ -51,7 +49,7 @@ override_dh_auto_clean-arch:
 
 override_dh_install-indep:
 	dh_install --indep
-	chmod +x debian/dalvik-exchange/usr/lib/android-sdk/build-tools/${BUILD_TOOLS_VERSION}/dx
+	chmod +x debian/dalvik-exchange/usr/lib/android-sdk/build-tools/debian/dx
 	mh_install
 
 override_dh_shlibdeps:
