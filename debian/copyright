@@ -3,6 +3,7 @@ Source: https://android.googlesource.com/platform/dalvik
 Files-Excluded: *.class *.jar
 
 Files: *
+       debian/additionalSrc/dmtracedump/*
 Copyright: 2005-2015, The Android Open Source Project
            2006, Google Inc.
            2005-2006, Intel Corporation

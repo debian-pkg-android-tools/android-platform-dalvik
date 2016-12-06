@@ -1,9 +1,10 @@
 NAME = dmtracedump
-SOURCES = TraceDump.c
-SOURCES := $(foreach source, $(SOURCES), tools/dmtracedump/$(source))
+SOURCES = tracedump.cc
+SOURCES := $(foreach source, $(SOURCES), debian/additionalSrc/dmtracedump/$(source))
+CPPFLAGS += -Idebian/additionalSrc/dmtracedump
 
 build: $(SOURCES)
-	$(CC) $^ -o $(NAME) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
+	$(CXX) $^ -o $(NAME) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)
 
 clean:
 	$(RM) $(NAME)
