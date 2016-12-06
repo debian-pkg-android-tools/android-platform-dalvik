@@ -1,6 +1,6 @@
 % DMTRACEDUMP(1) android-platform-dalvik | dmtracedump Manuals
 % The Android Open Source Project
-% 6.0.1_r16
+% 7.0.0_r1
 
 # NAME
 
@@ -8,7 +8,7 @@ dmtracedump - Java method trace dump tool
 
 # SYNOPSIS
 
-**dmtracedump** [-ho] [-s _sortable_] [-d _trace-file-name_] [-g _outfile_] _trace-file-name_
+**dmtracedump** [-h] [-o] [-s _sortable_] [-d _trace-file-name_] [-g _outfile_] _trace-file-name_
 
 # DESCRIPTION
 
