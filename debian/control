@@ -17,7 +17,6 @@ Build-Depends: android-libcutils-dev (>= 1:7.0.0+r1) [amd64 i386],
                pandoc,
                zlib1g-dev [amd64 i386]
 Build-Depends-Indep: default-jdk-headless | default-jdk,
-                     default-jdk-doc,
                      libandroid-dex-java (>= 7.0.0+r1),
                      libjarjar-java
 Standards-Version: 3.9.8
