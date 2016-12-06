@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
-version = dxVersion
+version = DX_VERSION
 group = 'com.android'
 
 dependencies {

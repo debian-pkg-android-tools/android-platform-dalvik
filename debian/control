@@ -4,11 +4,11 @@ Priority: optional
 Maintainer: Android tools Maintainer <android-tools-devel@lists.alioth.debian.org>
 Uploaders: Kai-Chung Yan <seamlikok@gmail.com>,
            Hans-Christoph Steiner <hans@eds.org>
-Build-Depends: android-libcutils-dev (>= 1:6.0.1+r55-1~) [amd64 i386],
-               android-liblog-dev (>= 1:6.0.1+r55-1~) [amd64 i386],
-               android-libnativehelper-dev (>= 6.0.1+r16~) [amd64 i386],
-               android-libutils-dev (>= 1:6.0.1+r55-1~) [amd64 i386],
-               android-libziparchive-dev (>= 1:6.0.1+r55-1~) [amd64 i386],
+Build-Depends: android-libcutils-dev (>= 1:7.0.0+r1) [amd64 i386],
+               android-liblog-dev (>= 1:7.0.0+r1) [amd64 i386],
+               android-libnativehelper-dev (>= 7.0.0+r1) [amd64 i386],
+               android-libutils-dev (>= 1:7.0.0+r1) [amd64 i386],
+               android-libziparchive-dev (>= 1:7.0.0+r1) [amd64 i386],
                debhelper (>= 10),
                dh-exec,
                gradle-debian-helper,
@@ -18,7 +18,7 @@ Build-Depends: android-libcutils-dev (>= 1:6.0.1+r55-1~) [amd64 i386],
                zlib1g-dev [amd64 i386]
 Build-Depends-Indep: default-jdk-headless | default-jdk,
                      default-jdk-doc,
-                     libandroid-dex-java,
+                     libandroid-dex-java (>= 7.0.0+r1),
                      libjarjar-java
 Standards-Version: 3.9.8
 Homepage: https://android.googlesource.com/platform/dalvik
@@ -76,7 +76,7 @@ Description: HPROF Converter
 Package: dalvik-exchange
 Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
-         libandroid-dex-java,
+         libandroid-dex-java (>= 7.0.0+r1),
          ${misc:Depends}
 Description: Manipulate Dalvik eXchange format and produce dex files
  Dalvik is a process virtual machine in Google's Android operating system that
@@ -92,7 +92,7 @@ Description: Manipulate Dalvik eXchange format and produce dex files
 Package: libandroid-jack-dx-java
 Architecture: all
 Section: java
-Depends: libandroid-dex-java,
+Depends: libandroid-dex-java (>= 7.0.0+r1),
          ${misc:Depends}
 Description: dalvik-exchange library for Jack
  Dalvik is a process virtual machine in Google's Android operating system that
