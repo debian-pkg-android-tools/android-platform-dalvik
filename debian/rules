@@ -5,7 +5,6 @@ include /usr/share/dpkg/pkg-info.mk
 
 export DEB_HOST_MULTIARCH
 export DEB_CFLAGS_MAINT_APPEND = -fPIC -DNDEBUG
-export DEB_CPPLAGS_MAINT_APPEND = -include android/arch/AndroidConfig.h
 export DEB_CXXFLAGS_MAINT_APPEND = -fPIC -DNDEBUG
 export DEB_LDFLAGS_MAINT_APPEND = -fPIC
 # See com/android/dx/Version.java
