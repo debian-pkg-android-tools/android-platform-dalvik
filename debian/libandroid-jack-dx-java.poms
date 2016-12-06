@@ -1,1 +1,1 @@
-debian/build/jack-dx.pom --artifact=debian/build/libs/jack-dx.jar --java-lib --usj-name=com.android.jack.dx
+debian/build/debian/jack-dx.pom --artifact=debian/build/libs/jack-dx.jar --java-lib --usj-name=com.android.jack.dx

@@ -21,15 +21,13 @@ jar {
   }
 }
 
-task generatePom {
-  assemble.dependsOn generatePom
-  outputs.files "${buildDir}/*.pom"
+task jackDxPom {
+  outputs.files "${buildDir}/debian/jack-dx.pom"
   doFirst {
-    pom { project {} }.writeTo("${buildDir}/${project.name}.pom")
     pom {
       project { groupId 'com.android.jack'}
-    }.writeTo("${buildDir}/jack-dx.pom")
+    }.writeTo("${buildDir}/debian/jack-dx.pom")
   }
-  clean.doLast { delete("${buildDir}/${project.name}.pom") }
 }
 
+defaultTasks 'assemble', 'jackDxPom'
