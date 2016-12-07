@@ -32,6 +32,7 @@ debian/out/dexdump: debian/dexdump.mk debian/out/libdex.so
 	dh $@
 
 override_dh_auto_build-indep:
+	mkdir --parents debian/out
 	dh_auto_build --buildsystem=gradle -- \
 	              --settings-file debian/settings.gradle \
 	              --project-prop DX_VERSION=$(DX_VERSION)
@@ -40,11 +41,14 @@ override_dh_auto_build-indep:
 	     debian/jack-dx.jarjar-rules \
 	     debian/build/libs/dx-$(DX_VERSION).jar \
 	     debian/build/libs/jack-dx.jar
+	proguard -include dx/shrinkedAndroid.proguard.flags \
+	         -injars "/usr/share/java/com.android.android-23.jar(**/*.class)" \
+	         -outjars debian/out/shrinkedAndroid.jar
 
 override_dh_auto_clean-indep:
 	dh_auto_clean --indep --buildsystem=gradle
 	mh_clean
-	$(RM) -r debian/.gradle
+	$(RM) -r debian/.gradle debian/out
 
 override_dh_auto_build-arch: $(foreach component,$(ARCH_COMPONENTS),debian/out/$(component))
 

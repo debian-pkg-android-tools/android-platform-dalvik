@@ -1,0 +1,14 @@
+Description: Specify the path to Debian's proguard
+Author: Kai-Chung Yan (殷啟聰)
+Last-Update: 2016-12-07
+--- a/dx/etc/mainDexClasses
++++ b/dx/etc/mainDexClasses
+@@ -83,7 +83,7 @@
+ fi
+ 
+ proguardExec="proguard.sh"
+-proguard=${PROGUARD_HOME}/bin/${proguardExec}
++proguard=/usr/bin/proguard
+ 
+ if [ ! -r "${proguard}" ]; then
+   # set proguard location for the SDK case
