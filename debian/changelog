@@ -1,8 +1,22 @@
-android-platform-dalvik (7.0.0+r1-1) UNRELEASED; urgency=medium
+android-platform-dalvik (7.0.0+r1-1) unstable; urgency=medium
 
   * New upstream release
+  * d/copyright: Exclude *.class
+  * Include the source of dmtracedump in debian/additionalSrc
+  * d/control:
+    * Build-Depends on default-jdk-headless | default-jdk
+    * Remove the useless default-jdk-doc from Build-Depends
+    * Unify the maintainer name to "Android Tools Maintainers"
+  * Set the dynamic ${BUILD_TOOLS_VERSION} to "debian"
+  * No longer requires AndroidConfig.h
+  * Update to debhelper 10
+  * Let gradle-debian-helper generate Maven POMs
+    * Build-Depends on gradle-debian-helper (>= 1.4~)
+  * Enable builds for ARM & MIPS
+  * Move libdex.so from android-libdex to android-libdex-dev
+  * Build shrinkedAndroid.jar
 
- -- Kai-Chung Yan <seamlikok@gmail.com>  Tue, 06 Dec 2016 13:41:48 +0800
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Wed, 07 Dec 2016 20:21:45 +0800
 
 android-platform-dalvik (6.0.1+r55-1) unstable; urgency=medium
 
