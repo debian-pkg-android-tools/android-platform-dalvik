@@ -22,8 +22,6 @@ LDFLAGS += -shared -Wl,-rpath=/usr/lib/$(DEB_HOST_MULTIARCH)/android -Wl,-soname
            -lz -L/usr/lib/$(DEB_HOST_MULTIARCH)/android -llog -lziparchive
 
 build: $(SOURCES)
-	$(CXX) $^ -o $(NAME).so.0 $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)
-	ln -s $(NAME).so.0 $(NAME).so
-
-clean:
-	$(RM) $(NAME).so*
+	mkdir --parents debian/out
+	$(CXX) $^ -o debian/out/$(NAME).so.0 $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)
+	ln -s $(NAME).so.0 debian/out/$(NAME).so

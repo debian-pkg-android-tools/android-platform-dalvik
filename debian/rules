@@ -9,6 +9,24 @@ export DEB_CXXFLAGS_MAINT_APPEND = -fPIC -DNDEBUG
 export DEB_LDFLAGS_MAINT_APPEND = -fPIC
 # See com/android/dx/Version.java
 DX_VERSION = 1.12
+ARCH_COMPONENTS = libdex.so dexdump dmtracedump hprof-conv
+
+# If building on architectures other than the supported ones, only build the
+# architecture independent components.
+ifeq ($(filter amd64 i386 armel armhf arm64 mips mipsel mips64el,$(DEB_HOST_ARCH)),)
+  ARCH_COMPONENTS =
+endif
+
+debian/out/lib%.so: debian/lib%.mk
+	make -f $<
+
+debian/out/%: debian/%.mk
+	make -f $<
+	pandoc -s -o debian/out/$(subst debian/out/,,$@).1 debian/$(subst debian/out/,,$@).1.md
+
+debian/out/dexdump: debian/dexdump.mk debian/out/libdex.so
+	make -f $<
+	pandoc -s -o debian/out/dexdump.1 debian/dexdump.1.md
 
 %:
 	dh $@
@@ -28,22 +46,11 @@ override_dh_auto_clean-indep:
 	mh_clean
 	$(RM) -r debian/.gradle
 
-override_dh_auto_build-arch:
-	make -f debian/libdex.mk
-	make -f debian/dexdump.mk
-	pandoc -s -o debian/dexdump.1 debian/dexdump.1.md
-	make -f debian/dmtracedump.mk
-	pandoc -s -o debian/dmtracedump.1 debian/dmtracedump.1.md
-	make -f debian/hprof-conv.mk
-	pandoc -s -o debian/hprof-conv.1 debian/hprof-conv.1.md
+override_dh_auto_build-arch: $(foreach component,$(ARCH_COMPONENTS),debian/out/$(component))
 
 override_dh_auto_clean-arch:
 	dh_auto_clean --arch
-	make clean -f debian/libdex.mk
-	make clean -f debian/dexdump.mk
-	make clean -f debian/dmtracedump.mk
-	make clean -f debian/hprof-conv.mk
-	$(RM) debian/*.1
+	$(RM) -r debian/out
 
 override_dh_install-indep:
 	dh_install --indep

@@ -4,7 +4,5 @@ SOURCES := $(foreach source, $(SOURCES), debian/additionalSrc/dmtracedump/$(sour
 CPPFLAGS += -Idebian/additionalSrc/dmtracedump
 
 build: $(SOURCES)
-	$(CXX) $^ -o $(NAME) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)
-
-clean:
-	$(RM) $(NAME)
+	mkdir --parents debian/out
+	$(CXX) $^ -o debian/out/$(NAME) $(CXXFLAGS) $(CPPFLAGS) $(LDFLAGS)
