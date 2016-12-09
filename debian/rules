@@ -41,9 +41,6 @@ override_dh_auto_build-indep:
 	     debian/jack-dx.jarjar-rules \
 	     debian/build/libs/dx-$(DX_VERSION).jar \
 	     debian/build/libs/jack-dx.jar
-	proguard -include dx/shrinkedAndroid.proguard.flags \
-	         -injars "/usr/share/java/com.android.android-23.jar(**/*.class)" \
-	         -outjars debian/out/shrinkedAndroid.jar
 
 override_dh_auto_clean-indep:
 	dh_auto_clean --indep --buildsystem=gradle

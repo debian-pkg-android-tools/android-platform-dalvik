@@ -1,3 +1,4 @@
-usr/share/java/com.android.dx.jar                     usr/lib/android-sdk/build-tools/debian/lib/dx.jar
 usr/lib/android-sdk/build-tools/debian/dx             usr/bin/dalvik-exchange
 usr/lib/android-sdk/build-tools/debian/mainDexClasses usr/bin/mainDexClasses
+usr/share/java/com.android.dx.jar                     usr/lib/android-sdk/build-tools/debian/lib/dx.jar
+usr/share/libandroid-23-java/shrinkedAndroid.jar      usr/lib/android-sdk/build-tools/debian/lib/shrinkedAndroid.jar

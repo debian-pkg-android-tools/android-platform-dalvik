@@ -17,10 +17,8 @@ Build-Depends: android-libcutils-dev (>= 1:7.0.0+r1) [amd64 i386 armel armhf arm
                pandoc,
                zlib1g-dev [amd64 i386 armel armhf arm64 mips mipsel mips64el]
 Build-Depends-Indep: default-jdk-headless | default-jdk,
-                     libandroid-23-java,
                      libandroid-dex-java (>= 7.0.0+r1),
-                     libjarjar-java,
-                     proguard
+                     libjarjar-java
 Standards-Version: 3.9.8
 Homepage: https://android.googlesource.com/platform/dalvik
 Vcs-Git: https://anonscm.debian.org/git/android-tools/android-platform-dalvik.git
@@ -78,8 +76,9 @@ Package: dalvik-exchange
 Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
          libandroid-dex-java (>= 7.0.0+r1),
+         libandroid-23-java (>= 6.0.1+r72-3~),
+         proguard,
          ${misc:Depends}
-Built-Using: android-framework-23
 Description: Manipulate Dalvik eXchange format and produce dex files
  Dalvik is a process virtual machine in Google's Android operating system that
  executes applications written for Android.
