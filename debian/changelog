@@ -1,3 +1,15 @@
+android-platform-dalvik (7.0.0+r1-2) unstable; urgency=medium
+
+  * d/control:
+    * dalvik-exchange Depends on proguard
+    * Remove libandroid-jack-dx-java since Jack does not need it for now
+  * No longer build shrinkedAndroid.jar but link to libandroid-23-java
+    * dalvik-exchange Depends on libandroid-23-java (>= 6.0.1+r72-3~)
+    * Remove the Built-Using field in dalvik-exchange
+    * No loner Build-Depends on libandroid-23-java
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Fri, 09 Dec 2016 21:45:30 +0800
+
 android-platform-dalvik (7.0.0+r1-1) unstable; urgency=medium
 
   * New upstream release
