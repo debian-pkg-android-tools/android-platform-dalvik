@@ -40,6 +40,8 @@ Architecture: amd64 i386 armel armhf arm64 mips mipsel mips64el
 Depends: android-libdex (= ${binary:Version}),
          android-libnativehelper-dev,
          ${misc:Depends}
+Breaks: android-libdex (<< 7.0.0+r1-2~)
+Replaces: android-libdex (<< 7.0.0+r1-2~)
 Description: Dalvik Executable library - Development files
  Dalvik is a process virtual machine in Google's Android operating system that
  executes applications written for Android.
