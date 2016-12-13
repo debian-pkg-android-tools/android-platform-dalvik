@@ -1,3 +1,10 @@
+android-platform-dalvik (7.0.0+r1-3) unstable; urgency=medium
+
+  * android-libdex-dev Breaks & Replaces android-libdex because libdex.so was
+    moved from android-libdex to android-libdex-dev (Closes: #848037)
+
+ -- Kai-Chung Yan <seamlikok@gmail.com>  Wed, 14 Dec 2016 00:43:26 +0800
+
 android-platform-dalvik (7.0.0+r1-2) unstable; urgency=medium
 
   * d/control:
