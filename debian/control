@@ -79,7 +79,7 @@ Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
          libandroid-dex-java (>= 7.0.0+r1),
          libandroid-23-java (>= 6.0.1+r72-3~),
-         proguard,
+         proguard-cli,
          ${misc:Depends}
 Description: Manipulate Dalvik eXchange format and produce dex files
  Dalvik is a process virtual machine in Google's Android operating system that
