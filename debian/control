@@ -4,11 +4,11 @@ Priority: optional
 Maintainer: Android Tools Maintainers <android-tools-devel@lists.alioth.debian.org>
 Uploaders: Kai-Chung Yan <seamlikok@gmail.com>,
            Hans-Christoph Steiner <hans@eds.org>
-Build-Depends: android-libcutils-dev (>= 1:7.0.0+r1) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
-               android-liblog-dev (>= 1:7.0.0+r1) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
+Build-Depends: android-libcutils-dev (>= 1:7.0.0+r33~) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
+               android-liblog-dev (>= 1:7.0.0+r33~) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
                android-libnativehelper-dev (>= 7.0.0+r1) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
-               android-libutils-dev (>= 1:7.0.0+r1) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
-               android-libziparchive-dev (>= 1:7.0.0+r1) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
+               android-libutils-dev (>= 1:7.0.0+r33~) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
+               android-libziparchive-dev (>= 1:7.0.0+r33~) [amd64 i386 armel armhf arm64 mips mipsel mips64el],
                debhelper (>= 10),
                dh-exec,
                gradle-debian-helper (>= 1.4~),
@@ -17,7 +17,7 @@ Build-Depends: android-libcutils-dev (>= 1:7.0.0+r1) [amd64 i386 armel armhf arm
                pandoc,
                zlib1g-dev [amd64 i386 armel armhf arm64 mips mipsel mips64el]
 Build-Depends-Indep: default-jdk-headless | default-jdk,
-                     libandroid-dex-java (>= 7.0.0+r1),
+                     libandroid-dex-java (>= 7.0.0+r33~),
                      libjarjar-java
 Standards-Version: 3.9.8
 Homepage: https://android.googlesource.com/platform/dalvik
@@ -77,7 +77,7 @@ Description: HPROF Converter
 Package: dalvik-exchange
 Architecture: all
 Depends: default-jre-headless (>= 1:1.6) | java6-runtime-headless,
-         libandroid-dex-java (>= 7.0.0+r1),
+         libandroid-dex-java (>= 7.0.0+r33~),
          libandroid-23-java (>= 6.0.1+r72-3~),
          proguard-cli,
          ${misc:Depends}
